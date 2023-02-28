@@ -6,6 +6,6 @@ import radius.drone.entity.Drone;
 
 public interface DroneRepository extends JpaRepository<Drone, Integer>{
  
-	public Drone findOneBySerialNumber(String serialNumber);
+	public Drone findBySerialNumber(String serialNumber);
 
 }

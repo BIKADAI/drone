@@ -28,7 +28,7 @@ public class DroneJob {
 	private Date startingDate;
 	
 	 @Column(name="battery_level")
-	 private Date batteryLevel;
+	 private int batteryLevel;
 	 
 	 @ManyToOne
 	 @JoinColumn(name="drone_id")
@@ -53,11 +53,11 @@ public class DroneJob {
 		this.startingDate = startingDate;
 	}
 
-	public Date getBatteryLevel() {
+	public int getBatteryLevel() {
 		return batteryLevel;
 	}
 
-	public void setBatteryLevel(Date batteryLevel) {
+	public void setBatteryLevel(int batteryLevel) {
 		this.batteryLevel = batteryLevel;
 	}
 

@@ -3,6 +3,7 @@ package radius.drone.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
 
@@ -11,6 +12,7 @@ import radius.drone.form.ItemDTO;
 import radius.drone.form.LoadDroneDTO;
 import radius.drone.repository.DroneRepository;
 
+@Component
 public class LoadDroneDTOValidator implements Validator{
 	
 	@Autowired
@@ -30,7 +32,7 @@ public class LoadDroneDTOValidator implements Validator{
 		// TODO Auto-generated method stub
 		LoadDroneDTO form =(LoadDroneDTO) target;
 		String serialNumber= form.getSerialNumber();
-		Drone drone = droneRepository.findOneBySerialNumber(serialNumber);
+		Drone drone = droneRepository.findBySerialNumber(serialNumber);
 		if(drone==null)  e.rejectValue("serialNumber", " SERIAL NUMBER NOT FOUND");
 		
 		List<ItemDTO> items = form.getItems();

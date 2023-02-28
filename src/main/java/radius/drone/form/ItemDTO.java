@@ -6,12 +6,12 @@ public class ItemDTO {
 	private String name;
 	private int weight;
 	private String code;
-	private Byte[] image;
+	private byte[] image;
 	private int quantity;
 	
 	
 	
-	public ItemDTO(String name, int weight, String code, Byte[] image, int quantity) {
+	public ItemDTO(String name, int weight, String code, byte[] image, int quantity) {
 		super();
 		this.name = name;
 		this.weight = weight;
@@ -25,7 +25,7 @@ public class ItemDTO {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public double getWeight() {
+	public int getWeight() {
 		return weight;
 	}
 	public void setWeight(int weight) {
@@ -37,10 +37,10 @@ public class ItemDTO {
 	public void setCode(String code) {
 		this.code = code;
 	}
-	public Byte[] getImage() {
+	public byte[] getImage() {
 		return image;
 	}
-	public void setImage(Byte[] image) {
+	public void setImage(byte[] image) {
 		this.image = image;
 	}
 	public int getQuantity() {

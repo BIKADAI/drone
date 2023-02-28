@@ -2,11 +2,13 @@ package radius.drone.service;
 
 import java.util.regex.Pattern;
 
+import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
 
 import radius.drone.form.ItemDTO;
 
+@Component
 public class ItemDTOValidator implements Validator {
 
 	@Override
